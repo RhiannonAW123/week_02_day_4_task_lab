@@ -22,3 +22,8 @@ class TestTask(unittest.TestCase):
 
     def test_task_decider__returns_cook_dinner(self):
         self.assertEqual("Cook Dinner", task_decider(self.task_3, self.task_2))
+
+    def test_task_decider__returns_clean_windows_reversed(self):
+        self.assertEqual("Clean Windows", task_decider(self.task_1, self.task_3))
+
+    
