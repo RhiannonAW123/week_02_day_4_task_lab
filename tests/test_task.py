@@ -14,5 +14,8 @@ class TestTask(unittest.TestCase):
     def test_task_duration(self):
         self.assertEqual(45, self.task_2.duration)
 
-    def test_task_decider(self):
+    def test_task_decider__returns_clean_windows(self):
         self.assertEqual("Clean Windows", task_decider(self.task_3, self.task_1))
+
+    def test_task_decider__returns_wash_dishes(self):
+        self.assertEqual("Wash Dishes", task_decider(self.task_1, self.task_2))
